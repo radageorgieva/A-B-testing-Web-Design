@@ -1,0 +1,29 @@
+---
+title: "R Notebook"
+output:
+  html_document:
+    df_print: paged
+---
+```{r}
+library(stargazer)
+library(tidyverse)
+library(forecast)
+```
+```{r}
+original <- rnorm(n=58, mean=4.9, sd=0.7)
+variant1 <- rnorm(n=62, mean = 1.4, sd = 0.2)
+```
+
+
+```{r}
+
+t.test(original,variant1)
+```
+```{r}
+t.test(original,variant1,alternative = 'greater')
+```
+```{r}
+t.test(variant1, mu =4.9 ,alternative = 'less')
+
+```
+
